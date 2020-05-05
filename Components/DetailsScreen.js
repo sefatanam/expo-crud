@@ -24,10 +24,10 @@ export default DetailsScreen = ({ navigation }) => {
         style={GlobalStyles.ButtonStyle}
         onPress={() => {
           navigation.navigate('SubmitForm', {
-            name:"Anam",
-            age:"18",
-            address:"A",
-            emailOrPhone:"B"
+            name:"",
+            age:"",
+            address:"",
+            emailOrPhone:""
           });
         }}
       >

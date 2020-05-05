@@ -6,7 +6,7 @@ import { OutlinedTextField } from "react-native-material-textfield";
 import { Formik } from "formik";
 
 export default SubmitForm = ({ route, navigation }) => {
-  
+
   const { name } = route.params;
   const { age } = route.params;
   const { address } = route.params;
@@ -14,7 +14,7 @@ export default SubmitForm = ({ route, navigation }) => {
 
   const checkingPerameter = () => {
     console.log(name);
-   return InitialFormLoad2(name,age,address,emailOrPhone);
+   return InitialFormLoadWithData(name,age,address,emailOrPhone);
   };
 
   const InitialFormLoad = () => (
@@ -67,7 +67,7 @@ export default SubmitForm = ({ route, navigation }) => {
     </Formik>
   );
   
-  const InitialFormLoad2 = (name,age,address,emailOrPhone) => (
+  const InitialFormLoadWithData = (name,age,address,emailOrPhone) => (
     <Formik
       initialValues={{
         name: name,
