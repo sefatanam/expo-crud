@@ -22,7 +22,14 @@ export default DetailsScreen = ({ navigation }) => {
     <SafeAreaView style={styles.container}>
       <Button
         style={GlobalStyles.ButtonStyle}
-        onPress={() => onGoBackHandler()}
+        onPress={() => {
+          navigation.navigate('SubmitForm', {
+            name:"Anam",
+            age:"18",
+            address:"A",
+            emailOrPhone:"B"
+          });
+        }}
       >
         Go Back To Submit Form
       </Button>
