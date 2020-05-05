@@ -5,11 +5,11 @@ import DetailsScreen from "./Components/DetailsScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
-const SubmitStack = createStackNavigator();
+const Stack = createStackNavigator();
 
 const SubmitFormStackScreen = () => (
-  <SubmitStack.Navigator initialRouteName="Details">
-    <SubmitStack.Screen
+  <Stack.Navigator initialRouteName="Details">
+    <Stack.Screen
       name="Details"
       component={DetailsScreen}
       options={{
@@ -17,7 +17,7 @@ const SubmitFormStackScreen = () => (
         headerTintColor: "white",
       }}
     />
-    <SubmitStack.Screen
+    <Stack.Screen
       name="SubmitForm"
       component={SubmitForm}
       options={{
@@ -26,7 +26,7 @@ const SubmitFormStackScreen = () => (
         headerTintColor: "white",
       }}
     />
-  </SubmitStack.Navigator>
+  </Stack.Navigator>
 );
 
 export default function App() {

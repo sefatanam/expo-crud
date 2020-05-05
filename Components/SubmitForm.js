@@ -61,7 +61,7 @@ export default SubmitForm = ({route, navigation }) => {
       </Formik>
       <Button
         style={GlobalStyles.ButtonStyle}
-        onPress={() => navigation.push("Details")}
+        onPress={() => navigation.goBack()}
       >
         Go Back To Details
       </Button>
