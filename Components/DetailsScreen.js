@@ -8,13 +8,26 @@ export default DetailsScreen = ({ navigation }) => {
   const onGoBackHandler = () => {
     return navigation.navigate("SubmitForm");
   };
+
+  const GetItemDetails = (obj) => {
+    console.log(obj);
+    return navigation.navigate("SubmitForm",{
+      name:obj.name,
+      age:obj.age,
+      address:obj.address,
+      emailOrPhone:obj.emailOrPhone
+    });
+  };
   const DATA = [
     { id: "1", name: "Sefat", emailOrPhone: "15464", age: 18, address: "A" },
-    { id: "2", name: "Sefat1", emailOrPhone: "15464", age: 18, address: "A" },
-    { id: "3", name: "Sefat2", emailOrPhone: "15464", age: 18, address: "A" },
-    { id: "4", name: "Sefat3", emailOrPhone: "15464", age: 18, address: "A" },
-    { id: "5", name: "Sefat4", emailOrPhone: "15464", age: 18, address: "A" },
-    { id: "6", name: "Sefat5", emailOrPhone: "15464", age: 18, address: "A" },
+    { id: "2", name: "Rakib", emailOrPhone: "594", age: 19, address: "B" },
+    { id: "3", name: "Jamal", emailOrPhone: "7882", age: 20, address: "C" },
+    { id: "4", name: "Kamal", emailOrPhone: "98995", age: 45, address: "D" },
+    { id: "5", name: "Kasem", emailOrPhone: "11652", age: 89, address: "E" },
+    { id: "6", name: "Rakib", emailOrPhone: "594", age: 19, address: "B" },
+    { id: "7", name: "Jamal", emailOrPhone: "7882", age: 20, address: "C" },
+    { id: "8", name: "Kamal", emailOrPhone: "98995", age: 45, address: "D" },
+    { id: "9", name: "Kasem", emailOrPhone: "11652", age: 89, address: "E" },
   ];
 
 
@@ -37,11 +50,13 @@ export default DetailsScreen = ({ navigation }) => {
         data={DATA}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
+          
           <Card
             name={item.name}
             age={item.age}
             address={item.address}
             emailOrPhone={item.emailOrPhone}
+            GetItemOnClick={()=>GetItemDetails(item)}
           />
         )}
       />
